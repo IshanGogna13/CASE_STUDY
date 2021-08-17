@@ -10,11 +10,11 @@ namespace ConsoleApp2
         
     
        
-        class UsingPeople
+        class UsingPeople                                                               //class using people to test program
         {
         public static void Main()
         { 
-            List<string> ski = new List<string> ( );
+            List<string> ski = new List<string> ( );                                    //list of skills
             ski.Add("C++");
             ski.Add("Java");
             Employee emp;

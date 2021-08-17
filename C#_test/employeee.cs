@@ -4,9 +4,9 @@ using System.Text;
 
 namespace ConsoleApp2
 {
-    public abstract class Employee
+    public abstract class Employee                                              //abstract class employee
     {
-        public int empId;
+        public int empId;                                                       //four sttributes
         public string empName;
         public string address;
         public double basicPay;
@@ -15,7 +15,7 @@ namespace ConsoleApp2
         {
             get
             {
-                return empId;
+                return empId;                                                   //getters and setters to access
             }
             set
             {
@@ -55,18 +55,18 @@ namespace ConsoleApp2
                 basicPay = value;
             }
         }
-        public Employee(int empId, string empName, string address, double basicPay)
+        public Employee(int empId, string empName, string address, double basicPay)                 //Constructor
         {
             EmpId = empId;
             EmpName = empName;
             Address = address;
             BasicPay = basicPay;
         }
-        public override string ToString()
+        public override string ToString()                                                       //ToString() method
         {
             return $"{empName} has id {empId}";
         }
 
-        public abstract double calculateSalary();
+        public abstract double calculateSalary();                                                   //abstract method to calculate salary
     }
 }
