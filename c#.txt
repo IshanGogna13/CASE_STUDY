@@ -1,0 +1,554 @@
+using System;
+
+namespace ConsoleApp1
+{
+	class circle
+	{
+		public static int getRadius()
+		{
+			int r;
+			Console.WriteLine("Enter Radius");
+		   	 r = int.Parse(Console.ReadLine());
+			return r;
+		}
+		public static int calcDiameter(int r)
+        {
+			int d = this.r * 2;
+			return d;
+        }
+		public static double calcArea(int r)
+        {
+			double area = 3.14 * this.r *this.r;
+			return area;
+        }
+
+		static void Main(string[] args)
+		{
+			int rad = getRadius();
+			int dia = calcDiameter(rad);
+			double ar = calcArea(rad);
+			Console.WriteLine($"The radius of circle is {rad} , the diameter is {dia} and the area is  {ar}");
+		}
+	}
+}
+
+
+
+
+
+
+
+
+--------------------------------------------------------------
+
+
+using System;
+
+namespace ConsoleApp1
+{
+	class BankAccount
+	{
+		public BankAccount()
+		{
+			int bal = 500;
+		}
+
+
+		public BankAccount(int r)
+        {
+			this.bal_discount = r;
+        }
+		public static double calcBalance()
+        {
+			Console.WriteLine($"")
+        }
+
+		static void Main(string[] args)
+		{
+			int rad = getRadius();
+			int dia = calcDiameter(rad);
+			double ar = calcArea(rad);
+			Console.WriteLine($"The radius of circle is {rad} , the diameter is {dia} and the area is  {ar}");
+		}
+	}
+}
+
+
+---------------------------------------------------------------------------
+
+	class EmployeeSal
+	{
+		double sal_basic;
+		double hr_all;
+		double trav_all;
+
+		public int empid;
+		public string empname;
+		public EmployeeSal(double s , double hr , double tr )
+		{
+			int total = s+hr+tr;
+		}
+		public static double calcTax(total)
+        {	double tax;
+            if (total < 500000)
+            {
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Exercises
+{
+
+    public enum Status
+    {
+        single,
+        married,
+        divorced,
+        widowed
+    }
+
+    class People
+    {
+
+
+        
+
+        public People(string name, Status st, DateTime dob, string address)
+        {
+            this.name = name;
+            this.st = st;
+            this.dob = dob;
+            this.address = address;
+
+        }
+
+        public string name { get; set; }
+        public DateTime dob { get; set; }
+        public string address { get; set; }
+        public Status st { get; set; }
+
+
+        public int getAge()
+        {
+            DateTime now = DateTime.Today;
+            int age = now.Year - dob.Year;
+            if (dob > now.AddYears(-age))
+                age--;
+
+            return age;
+        }
+
+        public Boolean canMarry()
+        {
+            if ((this.getAge()) > 18 && this.st != Status.married)
+                return true;
+            return false;
+        }
+
+        public override string ToString()
+        {
+            string decision = canMarry() ? "can" : "can't";
+            return $"{this.name} lives at {this.address} born on {this.dob.Date}, {this.st}, {this.getAge()} and {decision} marry";
+        }
+
+    }
+
+
+    class TestPeople
+    {
+        static void Main(string[] args)
+        {
+            People p = new People("Donald", Status.married, new DateTime(2015, 12, 1), "New York, US");
+
+            //Console.WriteLine(p.name);
+            //Console.WriteLine(p.getAge());
+            //Console.WriteLine(p.canMarry());
+            Console.WriteLine(p.ToString());
+        }
+
+    }
+}
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Exercises
+{ 
+struct Details
+{
+    public string name;
+    public string gender;
+    public double height;
+    public double weight;
+
+    public Details(string name, string gender, double height, double weight)
+    {
+        this.name = name;
+        this.gender = gender;
+        this.height = height;
+        this.weight = weight;
+    }
+}
+
+class Det
+{
+
+    static void Main(string[] args)
+    {
+
+        Details point = new Details("Ishan", "Male", 174, 72);
+
+        Console.WriteLine($"The name is {point.name}"); 
+
+}
+}
+}
+
+
+QUES. Calculate and print the sum and the average of the sequence. Keep the sequence in List<int>.
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+public class Sum_Av
+{
+    public static void Main()
+    {
+        List<int> seq = Read();
+        Console.WriteLine("The sum of the numbers is: " + seq.Sum());
+        Console.WriteLine("The average of the numbers is: " + seq.Average());
+    }
+
+    private static List<int> Read()
+    {
+        Console.WriteLine("Please, enter as many positive integer numbers as you'd like and press Enter when finnished. Enter only one number per line:");
+        List<int> seq = new List<int>();
+        string input = Console.ReadLine();
+        while (input != string.Empty)
+        {
+            int num = -1;
+            
+            
+                num = int.Parse(input);
+                if (num < 0)
+                {
+                    Console.WriteLine("Enter positive numbers!");
+                }
+                else
+                {
+                    seq.Add(num);
+                    Console.WriteLine(input + " successfully added!");
+                }
+            
+            input = Console.ReadLine();
+        }
+
+        Console.WriteLine("The numbers you entered are: " + string.Join(", ", seq));
+        return seq;
+    }
+}
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------
+
+QUES.	Write a program, which reads from the console N integers and prints them in reversed order. Using the  Stack<int> class.
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+class Rev
+{
+  
+    public static Stack<int> st = new Stack<int>();
+
+    public static void Input_num(int number)
+    {
+        while (number != 0)
+        {
+            st.Push(number % 10);
+            number = number / 10;
+        }
+    }
+
+  
+    public static int reverse(int number)
+    {
+        
+        Input_num(number);
+        int reverse = 0;
+        int i = 1;
+
+      
+        while (st.Count > 0)
+        {
+            reverse = reverse + (st.Peek() * i);
+            st.Pop();
+            i = i * 10;
+        }
+
+       
+        return reverse;
+    }
+
+    
+    public static void Main(string[] args)
+    {
+        int number = int.Parse(Console.ReadLine());
+        Console.WriteLine(reverse(number));
+    }
+}
+
+
+
+
+
+------------------------------------------------------------------------------
+
+QUES. Write a program that reads from the console a sequence of positive integer numbers. The sequence ends when an empty line is entered. Print the sequence sorted in ascending order.
+
+
+using System;
+public class Exercise11
+{
+    public static void Main()
+    {
+      
+        int size, i, j, temp;
+
+
+        Console.Write("Enter the size of array");
+        size = int.Parse(Console.ReadLine());
+
+        int[] arr1 = new int[size];
+
+        Console.WriteLine($"Enter {size} elements in the array :", size);
+        for (i = 0; i < size; i++)
+        {
+            arr1[i] = int.Parse(Console.ReadLine());
+        }
+
+        for (i = 0; i < size; i++)
+        {
+            for (j = i + 1; j < size; j++)
+            {
+                if (arr1[j] < arr1[i])
+                {
+                    temp = arr1[i];
+                    arr1[i] = arr1[j];
+                    arr1[j] = temp;
+                }
+            }
+        }
+        for (i = 0; i < size; i++)
+        {
+            Console.Write("{0}  ", arr1[i]);
+        }
+        
+    }
+
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+
+QUES..	Write a program, which removes all negative numbers from a sequence. Example: array = {19, -10, 12, -6, -3, 34, -2, 5}  {19, 12, 34, 5}.
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace numbers
+{
+    class negative
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Enter size of array :");
+            int size = int.Parse(Console.ReadLine());
+
+            int[] arr = new int[size];
+            int[] arr2 = new int[size];
+            int count = 0;
+            Console.WriteLine($"Enter {size} elements : ");
+            int size2 = size;
+            for(int i=0;i<size;i++)
+            {
+                arr[i] = int.Parse(Console.ReadLine());
+            }
+
+            for(int i=0; i<size;i++)
+            {
+                if(arr[i]>=0)
+                {
+                    arr2[i-count] = arr[i];
+                    
+                }
+                else
+                {
+                    count++;
+                    size2--;
+                }
+            }
+            for(int i=0;i<size2;i++)
+            {
+                Console.WriteLine(arr2[i]);
+            }
+
+         }
+    }
+
+
+
+}
+
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+QUES.	Write a program that finds in a given array of integers (in the range [0…1000]) how many times each of them occurs.
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+class Odd
+{
+    // Function to find the element
+    // occurring odd number of times
+    static int getOccurrence(int[] arr, int arr_size,int n)
+    {
+        int count = 0;
+        for (int i = 0; i < arr_size; i++)
+        {
+            
+            if (arr[i] == n)
+            count++;
+            
+            
+        }
+        return count;
+    }
+
+    // Driver code
+    public static void Main()
+    {
+        int[] arr = { 2, 3, 5, 4, 5, 2, 4, 3, 5, 2, 4, 4, 2 };
+        int n = arr.Length;
+        for (int i = 0; i < n; i++)
+        {
+
+
+            Console.WriteLine($"{arr[i]} occurs :"+getOccurrence(arr, n,arr[i])+ "times .");
+        }
+    }
+}
+
+
+
+
+
+------------------------------------------------------------------------------------------------
+QUES. 	The majorant of an array of size N is a value that occurs in it at least N/2 + 1 times. Write a program that finds the majorant of given array and prints it. 
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+class MAJ
+{
+    // Function to find the element
+    // occurring odd number of times
+    static string getOccurrence(int[] arr, int arr_size,int n)
+    {
+        int count = 0;
+        for (int i = 0; i < arr_size; i++)
+        {
+            
+            if (arr[i] == n)
+            count++;
+            
+            
+        }
+        if (count >= ((arr_size / 2) + 1)) 
+        {
+            return "Majorant";
+        }
+        else 
+        {
+            return "NON-Majorant";
+        }
+    }
+
+    // Driver code
+    public static void Main()
+    {
+        int[] arr = { 2, 3, 5, 4, 5, 2, 4, 3, 5, 2, 4, 4, 2 };
+        int n = arr.Length;
+        for (int i = 0; i < n; i++)
+        {
+
+            string answer = getOccurrence(arr, n, arr[i]);
+            Console.WriteLine($"{arr[i]} is : {answer}");
+        }
+    }
+}
+
+
+
+-------------------------------------------------------------------------------------
+
+
+
+
+
+
