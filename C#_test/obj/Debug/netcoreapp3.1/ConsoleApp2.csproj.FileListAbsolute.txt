@@ -11,3 +11,16 @@ C:\Users\asus\source\repos\ConsoleApp2\ConsoleApp2\bin\Debug\netcoreapp3.1\Conso
 C:\Users\asus\source\repos\ConsoleApp2\ConsoleApp2\obj\Debug\netcoreapp3.1\ConsoleApp2.dll
 C:\Users\asus\source\repos\ConsoleApp2\ConsoleApp2\obj\Debug\netcoreapp3.1\ConsoleApp2.pdb
 C:\Users\asus\source\repos\ConsoleApp2\ConsoleApp2\obj\Debug\netcoreapp3.1\ConsoleApp2.genruntimeconfig.cache
+C:\Users\asus\Desktop\projects\CASE_STUDY\C#_test\bin\Debug\netcoreapp3.1\ConsoleApp2.exe
+C:\Users\asus\Desktop\projects\CASE_STUDY\C#_test\bin\Debug\netcoreapp3.1\ConsoleApp2.deps.json
+C:\Users\asus\Desktop\projects\CASE_STUDY\C#_test\bin\Debug\netcoreapp3.1\ConsoleApp2.runtimeconfig.json
+C:\Users\asus\Desktop\projects\CASE_STUDY\C#_test\bin\Debug\netcoreapp3.1\ConsoleApp2.runtimeconfig.dev.json
+C:\Users\asus\Desktop\projects\CASE_STUDY\C#_test\bin\Debug\netcoreapp3.1\ConsoleApp2.dll
+C:\Users\asus\Desktop\projects\CASE_STUDY\C#_test\bin\Debug\netcoreapp3.1\ConsoleApp2.pdb
+C:\Users\asus\Desktop\projects\CASE_STUDY\C#_test\obj\Debug\netcoreapp3.1\ConsoleApp2.csproj.AssemblyReference.cache
+C:\Users\asus\Desktop\projects\CASE_STUDY\C#_test\obj\Debug\netcoreapp3.1\ConsoleApp2.AssemblyInfoInputs.cache
+C:\Users\asus\Desktop\projects\CASE_STUDY\C#_test\obj\Debug\netcoreapp3.1\ConsoleApp2.AssemblyInfo.cs
+C:\Users\asus\Desktop\projects\CASE_STUDY\C#_test\obj\Debug\netcoreapp3.1\ConsoleApp2.csproj.CoreCompileInputs.cache
+C:\Users\asus\Desktop\projects\CASE_STUDY\C#_test\obj\Debug\netcoreapp3.1\ConsoleApp2.dll
+C:\Users\asus\Desktop\projects\CASE_STUDY\C#_test\obj\Debug\netcoreapp3.1\ConsoleApp2.pdb
+C:\Users\asus\Desktop\projects\CASE_STUDY\C#_test\obj\Debug\netcoreapp3.1\ConsoleApp2.genruntimeconfig.cache
