@@ -1,0 +1,91 @@
+﻿@model JOBTRACKMVC.Models.MvcTask
+@{
+    ViewBag.Title = "AddOrEdit";
+}
+
+<h2>AddOrEdit</h2>
+<div class="form-body">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.TaskId)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TaskName)
+            @Html.EditorFor(model => model.TaskName)
+            @Html.ValidationMessageFor(model => model.TaskName)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OwnerId)
+            @Html.EditorFor(model => model.OwnerId)
+            @Html.ValidationMessageFor(model => model.OwnerId)
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CreatorId)
+            @Html.EditorFor(model => model.CreatorId)
+            @Html.ValidationMessageFor(model => model.CreatorId)
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description)
+            @Html.EditorFor(model => model.Description)
+            @Html.ValidationMessageFor(model => model.Description)
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.status)
+            @Html.EditorFor(model => model.status)
+            @Html.ValidationMessageFor(model => model.status)
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Priority)
+            @Html.EditorFor(model => model.Priority)
+            @Html.ValidationMessageFor(model => model.Priority)
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Notes)
+            @Html.EditorFor(model => model.Notes)
+            @Html.ValidationMessageFor(model => model.Notes)
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IsBookmarked)
+            @Html.EditorFor(model => model.IsBookmarked)
+            @Html.ValidationMessageFor(model => model.IsBookmarked)
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CreatedOn)
+            @Html.EditorFor(model => model.CreatedOn)
+            @Html.ValidationMessageFor(model => model.CreatedOn)
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.StatusChangedOn)
+            @Html.EditorFor(model => model.StatusChangedOn)
+            @Html.ValidationMessageFor(model => model.StatusChangedOn)
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn button" />
+            <input type="reset" value="Reset" class="btn button" />
+        </div>
+
+    }
+</div>
+
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval");
+}

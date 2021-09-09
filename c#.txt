@@ -545,6 +545,43 @@ class MAJ
 
 
 
+---------------------------------------------------
+
+
+Sum of salary in department 10//////////////
+
+using System;
+using EntityFrameworkSamples.Models;
+using System.Linq;
+
+namespace EntityFrameworkSamples
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //GetAllEmpDetails();
+            GetSumSalbyDEpt();
+        }
+
+        private static void GetSumSalbyDEpt()
+        {
+            var ctx = new learningContext();
+            var emps = ctx.Emps.Where(e => e.Deptno==10).Select(e=>e.Sal).Sum();
+           
+                Console.WriteLine(emps);
+           
+        }
+    }
+}
+
+
+-------------------------------------------------
+
+
+
+
+
 -------------------------------------------------------------------------------------
 
 
